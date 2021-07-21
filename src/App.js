@@ -2,37 +2,29 @@ import React from 'react';
 import {
   ChakraProvider,
   Box,
-  Text,
-  Link,
-  VStack,
-  Code,
   Grid,
   theme,
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+// import { ColorModeSwitcher } from './ColorModeSwitcher';
+
+import { App as BannerLink } from './components/BannerLink/App'
+import { App as CTASimple } from './components/CTASimple/App'
+import { App as TwoByTwoFeatures } from './components/TwoByTwoFeatures/App'
+import { App as CenteredWithSlider } from './components/CenteredWithSlider/App'
+import { App as StatWithThreeColumns } from './components/StatWithThreeColumns/App'
+import { App as SimpleFooter } from './components/SimpleFooter/App'
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
+          <BannerLink/>
+          <CTASimple/>
+          <TwoByTwoFeatures/>
+          <CenteredWithSlider/>
+          <StatWithThreeColumns/>
+          <SimpleFooter/>
         </Grid>
       </Box>
     </ChakraProvider>
